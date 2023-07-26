@@ -1,0 +1,26 @@
+.swipeDown-appear {
+    transform: translateY(-100%);
+}
+
+.swipeDown-appear-active {
+    transform: translateY(0);
+    transition: transform 1000ms;
+}
+
+.swipeDown-enter {
+    transform: translateY(-100%);
+}
+
+.swipeDown-enter-active {
+    transform: translateY(0);
+    transition: transform 1000ms;
+}
+
+.swipeDown-exit {
+    opacity: 1;
+}
+
+.swipeDown-exit-active {
+    opacity: 0;
+    transition: opacity 1000ms;
+}
