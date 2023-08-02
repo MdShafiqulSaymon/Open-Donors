@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FiMenu } from "react-icons/fi";
 import AvatarIcon from "../../Buttons/AvaterIcon/AvatarIcon";
+import NotificationDropdown from "../../Buttons/NotificationIcon";
 import { toBeRequired } from "@testing-library/jest-dom/matchers";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../Contexts/UserContext";
@@ -55,6 +56,7 @@ const Header = () => {
 							</button>
 						</Link>
 					</div>
+					<NotificationDropdown />
 					<div className="flex items-center">
 						{/* Conditionally render the SignInSignUp or AvatarIcon based on user's authentication status */}
 						{!users ? (
@@ -62,6 +64,7 @@ const Header = () => {
 								SignIn/SignUp
 							</button>
 						) : (
+							
 							<AvatarIcon firstName="Abu" lastName="Hasan" />
 						)}
 					</div>
