@@ -60,12 +60,13 @@ const AvatarIcon = ({ firstName, lastName }) => {
 							></div>
 						</div>
 					</div>
-					<a
+					<Link
+						to="/edituser"
 						className="block px-4 py-2 text-sm text-black hover:bg-gray-200"
 						href="#"
 					>
 						Edit Account Information
-					</a>
+					</Link>
 					{token ? (
 						<Link>
 							<a

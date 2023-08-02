@@ -32,12 +32,16 @@ const Header = () => {
 							isOpen ? "block" : "hidden"
 						} md:block`}
 					>
-						<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette">
-							Home
-						</button>
-						<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette">
-							About
-						</button>
+						<Link to="/">
+							<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette">
+								Home
+							</button>
+						</Link>
+						<Link to="/">
+							<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette">
+								About
+							</button>
+						</Link>
 
 						{/* Conditionally render the Services button if user is logged in */}
 						<Link to={token ? "/services" : "/signin"}>
@@ -45,10 +49,11 @@ const Header = () => {
 								Services
 							</button>
 						</Link>
-
-						<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette">
-							Contact
-						</button>
+						<Link to="/contact">
+							<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette">
+								Contact
+							</button>
+						</Link>
 					</div>
 					<div className="flex items-center">
 						{/* Conditionally render the SignInSignUp or AvatarIcon based on user's authentication status */}
