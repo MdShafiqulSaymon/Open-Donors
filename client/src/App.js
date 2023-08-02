@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import EditAccountInfo from "./pages/EditAccountInfo";
 import ChangePassword from "./pages/ChangePassword";
 import { UserProvider, UserContext } from "./Contexts/UserContext";
-import EditAccountInfo from "./pages/EditAccountInfo";
+import EditUser from "./pages/EditUser";
 import "./App.css";
 function App() {
 	return (
@@ -20,7 +20,7 @@ function App() {
 						<Route path="/" Component={Home} />
 						<Route path="/completereg" Component={CompleteReg} />
 						<Route path="/services" Component={Services} />
-						<Route path="/edituser" Component={Services} />
+						<Route path="/edituser" Component={EditAccountInfo} />
 					</Routes>
 				</UserProvider>
 			</Router>
