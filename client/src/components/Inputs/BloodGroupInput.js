@@ -1,5 +1,5 @@
 import React from "react";
-const BloodGroupInput = ({ blood, handleBlood }) => {
+const BloodGroupInput = ({ blood, setBlood }) => {
 	const bloodGroups = [
 		" ",
 		"A+",
@@ -21,7 +21,7 @@ const BloodGroupInput = ({ blood, handleBlood }) => {
 				id="bloodGroup"
 				name="bloodGroup"
 				value={blood}
-				onChange={(e) => handleBlood(e.target.value)}
+				onChange={(e) => setBlood(e.target.value)}
 			>
 				{bloodGroups.map((group) => (
 					<option key={group} value={group}>

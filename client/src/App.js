@@ -4,6 +4,8 @@ import SignUpPage from "./pages/SignUpPage";
 import CompleteReg from "./pages/CompleteReg";
 import Services from "./pages/Services";
 import Home from "./pages/Home";
+import EditAccountInfo from "./pages/EditAccountInfo";
+import ChangePassword from "./pages/ChangePassword";
 import { UserProvider, UserContext } from "./Contexts/UserContext";
 import "./App.css";
 function App() {
@@ -17,6 +19,8 @@ function App() {
 						<Route path="/" Component={Home} />
 						<Route path="/completereg" Component={CompleteReg} />
 						<Route path="/services" Component={Services} />
+						<Route path="/editaccountinfo" Component={EditAccountInfo} />
+						<Route path="/changepassword" Component={ChangePassword} />
 					</Routes>
 				</UserProvider>
 			</Router>

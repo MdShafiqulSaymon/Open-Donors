@@ -112,8 +112,8 @@ export default function PasswordInput({ label, value, setValue, placeholder, oth
       >
         <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
       </button>
-      {label === 'Password' && passwordStrength && <p className={`text-xs italic ${getPasswordStrengthColor()}`}>{passwordStrength}</p>}
-      {label === 'Confirm Password' && !isMatch && <p className="text-red-500 text-xs italic">Passwords do not match.</p>}
+      {label === 'Password' || label === 'Enter new password' && passwordStrength && <p className={`text-xs italic ${getPasswordStrengthColor()}`}>{passwordStrength}</p>}
+      {label === 'Confirm Password'|| label === 'Confirm new password' && !isMatch && <p className="text-red-500 text-xs italic">Passwords do not match.</p>}
     </div>
   )
 }
