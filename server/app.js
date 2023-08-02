@@ -14,9 +14,12 @@ module.exports = app;
 const UserReg = require("./routes/UserReg");
 const UserLogIn = require("./routes/UserLogIn");
 const Service = require("./routes/ServiceAllUserInfo");
+const EditUserInfo = require("./routes/EditUserInfo");
 app.use("/completereg", UserReg);
 
 app.use("/signin", UserLogIn);
 app.use("/services", Service);
+app.use("/edituser", EditUserInfo);
+
 // Database Connetion
 CONNECTION_DB();
