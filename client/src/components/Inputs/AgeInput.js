@@ -22,6 +22,7 @@ const AgeInput = ({ dob, setDob, age, setAge, handleAgeChange }) => {
 				disabled
 				style={{ color: "gray" }}
 			/>
+			{age>=18? '': <p className="text-red-500 text-xs italic">Age must be 18 or above</p>}
 		</div>
 	);
 };

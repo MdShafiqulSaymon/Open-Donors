@@ -66,6 +66,7 @@ const CompleteReg = () => {
 			LastName &&
 			dob &&
 			age &&
+			age>=18 &&
 			blood &&
 			divisionId &&
 			district
