@@ -5,6 +5,7 @@ import districtdata from '../api/districts.json'
 import DistrictInput from "../components/Inputs/DistrictInput";
 import DivisionInput from "../components/Inputs/DivisionInput";
 import FilterSearchBar from "../components/FilterSearch/FilterSearch";
+import Footer from "../components/common/footer/Footer";
 import Resultset from "../components/FilterSearch/Resultset";
 const Services = ()=>{
 return(
@@ -12,6 +13,7 @@ return(
         
         <Header />
         <FilterSearchBar />
+        <Footer />
         
     </div>
 )

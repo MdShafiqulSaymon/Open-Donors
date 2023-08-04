@@ -1,43 +1,62 @@
 import React from "react";
-import "./footer.css";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF,faGooglePlus,faGithub, faLinkedin, faTwitter, faGit } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
   return (
-    <>
-      <section className="newletter">
-        <div className="container flexSB">
-          <div className="leftrow">
-            <h1>Search Everything, Know Everything</h1>
-            <span>"Everything starts from here"</span>
-          </div>
-          <div className="rightrow">
-            <input type="text" placeholder="Search anything" />
-            <i className="fa fa-paper-plane"></i>
-          </div>
-        </div>
-      </section>
-      <footer>
-        <div className="container padding">
-          <div className="box logo">
-            <h1>CUET SCHOLAR</h1>
-            <span>ONLINE EDUCATION & RESEARCH</span>
-            <p>
-              An approach to help students of CSE Dept. with all the published
-              and undergrad thesis and project works
-            </p>
-
-            <i className="fab fa-facebook-f icon"></i>
-            <i className="fab fa-twitter icon"></i>
-            <i className="fab fa-instagram icon"></i>
-          </div>
-          
-          
-        </div>
-      </footer>
-      <div className="legal">
-        <p>© Copyright Chittagong University of Engineering & Technology</p>
+    <footer className="bottom-0 left-0 right-0 bg-red-500 w-full py-8 text-black">
+      <div className="flex flex-col items-center justify-center">
+        
+       
+        <ul className="flex space-x-4">
+          <li>
+            <a
+              href="#"
+              className="text-black border border-black rounded-full p-2 hover:bg-black hover:text-white"
+            >
+              <FontAwesomeIcon icon={faFacebookF} size="lg"/>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-black border border-black rounded-full p-2 hover:bg-black hover:text-white"
+            >
+              {/* <i className="fab fa-twitter text-xl"></i> */}
+              <FontAwesomeIcon icon={faTwitter} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-black border border-black rounded-full p-2 hover:bg-black hover:text-white"
+            >
+              {/* <i className="fab fa-google-plus text-xl"></i> */}
+              <FontAwesomeIcon icon={faGooglePlus} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-black border border-black rounded-full p-2 hover:bg-black hover:text-white"
+            >
+              {/* <i className="fab fa-youtube text-xl"></i> */}
+              <FontAwesomeIcon icon = {faGithub} />
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              className="text-black border border-black rounded-full p-2 hover:bg-black hover:text-white"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </li>
+        </ul>
       </div>
-    </>
+      <h3 className="text-lg font-semibold capitalize text-center mt-5">
+          Copyright by Open-Donors @2023 | All rights reserved
+        </h3>
+    </footer>
   );
 };
 
