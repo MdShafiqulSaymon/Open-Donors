@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Home from "./pages/Home";
 import EditAccountInfo from "./pages/EditAccountInfo";
 import ChangePassword from "./pages/ChangePassword";
+import PasswordReset from "./pages/PasswordReset";
 import { UserProvider, UserContext } from "./Contexts/UserContext";
 import EditUser from "./pages/EditUser";
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
 						<Route path="/completereg" Component={CompleteReg} />
 						<Route path="/services" Component={Services} />
 						<Route path="/edituser" Component={EditAccountInfo} />
+						<Route path="/resetpassword" Component={PasswordReset} />
 					</Routes>
 				</UserProvider>
 			</Router>

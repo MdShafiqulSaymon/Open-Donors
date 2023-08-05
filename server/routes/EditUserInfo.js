@@ -20,10 +20,12 @@ router.put("/", async (req, res) => {
 			activeStatus: fullData.isActive,
 			imageBase64: preData.imageBase64,
 		};
-		res
-			.status(200)
-			.json({ mess: "Data get Successfully", preData, newUpdatedData })
-			.end();
+		const updateUser = await User.findOneAndUpdate(
+			{ _id: preData._id },
+			{ $set: newUpdatedData },
+			{ new: true }
+		);
+		res.status(200).json({ mess: "Data get Successfully", updateUser }).end();
 	} catch {
 		res
 			.status(400)

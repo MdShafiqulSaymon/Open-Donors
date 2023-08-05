@@ -37,11 +37,7 @@ const FilterSearchBar = () => {
 						divisionId={divisionId}
 						onChange={handleDistrictChange}
 					/>
-					<BloodGroupInput
-						className="mb-2"
-						blood={blood}
-						handleBlood={handleBlood}
-					/>
+					<BloodGroupInput className="mb-2" blood={blood} setBlood={setBlood} />
 				</div>
 				<button
 					className=" border border-gray-300 rounded px-4 py-2 bg-red-800 relative mr-64 hover:bg-red-700"
