@@ -1,0 +1,19 @@
+{
+    "_id": {
+      "$oid": "64ba91121bb03c90572b0fba"
+    },
+    "FirstName": "MD.SHAFIQUL",
+    "LastName": "HASAN",
+    "activeStatus": true,
+    "phone": "+8801888326888",
+    "age": 6,
+    "blood": "B+",
+    "confirmPassword": "asdfghjkl2@",
+    "district": "33",
+    "divisionId": "4",
+    "dob": "2017-01-01",
+    "email": "u1904083@student.cuet.ac.bd",
+    "imageBase64": "",
+    "password": "asdfghjkl2@",
+    "__v": 0
+  }
