@@ -12,8 +12,9 @@ const Home = () => {
 			<Header />
 			<Hero />
 			<AboutCard />
-			{/* <Footer /> */}
+			<Footer />
 		</>
+		
 	);
 };
 

@@ -13,7 +13,7 @@ const Header = () => {
 	useEffect(() => {}, []);
 	return (
 		<nav className="bg-red-500 p-6">
-			<div className="flex flex-col md:flex-row items-center justify-between">
+			<div className="flex flex-col md:flex-row items-center justify-between mt-2">
 				<div className="flex items-center justify-between">
 					<div>
 						<h1 className="text-white text-2xl font-bold font-courgette">
@@ -56,7 +56,7 @@ const Header = () => {
 							</button>
 						</Link>
 					</div>
-					<NotificationDropdown />
+					
 					<div className="flex items-center">
 						{/* Conditionally render the SignInSignUp or AvatarIcon based on user's authentication status */}
 						{!users ? (
@@ -64,8 +64,11 @@ const Header = () => {
 								SignIn/SignUp
 							</button>
 						) : (
+							<div className="flex">
+							<NotificationDropdown />
 							
 							<AvatarIcon firstName="Abu" lastName="Hasan" />
+							</div>
 						)}
 					</div>
 				</div>
