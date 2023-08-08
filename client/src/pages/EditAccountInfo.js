@@ -50,16 +50,13 @@ const EditAccountInfo = () => {
 			preData: userdata.user,
 		};
 		try {
-			const request = await fetch(
-				"https://open-donors.onrender.com//edituser",
-				{
-					method: "PUT",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(data),
-				}
-			);
+			const request = await fetch("https://open-donors.onrender.com/edituser", {
+				method: "PUT",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
 			const response = await request.json();
 			console.log(response);
 		} catch (err) {

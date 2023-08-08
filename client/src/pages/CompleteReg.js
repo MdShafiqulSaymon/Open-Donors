@@ -31,7 +31,7 @@ const CompleteReg = () => {
 		const finalData = margeData();
 		try {
 			const request = await fetch(
-				"https://open-donors.onrender.com//completereg",
+				"https://open-donors.onrender.com/completereg",
 				{
 					method: "POST",
 					headers: {

@@ -30,7 +30,7 @@ const SignInForm = () => {
 			password,
 		};
 		try {
-			const request = await fetch("https://open-donors.onrender.com//signin", {
+			const request = await fetch("https://open-donors.onrender.com/signin", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
