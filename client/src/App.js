@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import Home from "./pages/Home";
 import EditAccountInfo from "./pages/EditAccountInfo";
 import ChangePassword from "./pages/ChangePassword";
+import Contact from "./pages/Contact";
 import ForgetPass from "./pages/ForgetPass";
 import { UserProvider, UserContext } from "./Contexts/UserContext";
 import EditUser from "./pages/EditUser";
@@ -23,6 +24,7 @@ function App() {
 						<Route path="/services" Component={Services} />
 						<Route path="/edituser" Component={EditAccountInfo} />
 						<Route path="/forgetpass" Component={ForgetPass} />
+						<Route path="/contact" Component={Contact} />
 					</Routes>
 				</UserProvider>
 			</Router>
