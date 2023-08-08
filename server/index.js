@@ -1,6 +1,3 @@
-import '@fortawesome/fontawesome-free/css/all.css';
-
-
 const app = require("./app");
 require("dotenv/config");
 app.listen(process.env.PORT, () => {
