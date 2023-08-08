@@ -1,5 +1,5 @@
 import React from "react";
-
+import jwt_decode from "jwt-decode";
 const ResultsetRow = ({
 	photo,
 	fullName,
@@ -7,6 +7,9 @@ const ResultsetRow = ({
 	phoneNumber,
 	activeStatus,
 }) => {
+	const token = localStorage.getItem("token");
+	const data = jwt_decode(token);
+	const number = data.user.phone;
 	return (
 		<div className="flex items-center justify-between  hover:bg-gray-300 rounded-lg shadow-md hover:bg-light-green hover:shadow-xl">
 			{/* Photo */}
@@ -36,7 +39,9 @@ const ResultsetRow = ({
 
 			{/* Phone Number */}
 			<div className="ml-4">
-				<p className="text-sm text-gray-500">Phone: {phoneNumber}</p>
+				<a href={`https://wa.me/${number}`}>
+					<p className="text-sm text-gray-500">Phone: {phoneNumber}</p>
+				</a>
 			</div>
 
 			{/* Active Status */}
