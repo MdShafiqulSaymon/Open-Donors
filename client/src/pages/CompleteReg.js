@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import TextInput from "../components/Inputs/TextInput";
 import ImageInput from "../components/Inputs/ImageInput";
@@ -26,6 +26,7 @@ const CompleteReg = () => {
 	const [district, setDistrict] = useState("");
 	const [isFormValid, setIsFormValid] = useState(false);
 	const [imageBase64, setImageBase64] = useState("");
+	const navigate = useNavigate();
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		const finalData = margeData();
@@ -40,15 +41,13 @@ const CompleteReg = () => {
 					body: JSON.stringify(finalData),
 				}
 			);
-			console.log(request.status);
 			if (request.status === 400) {
-				console.log(request.json().exist);
 				alert("Email or Phone Number Already Exist!");
 			} else if (request.status === 200) {
 				alert("Registration Successfull !!!");
+				navigate("/signin");
 			}
 			const response = await request.json();
-			console.log(response.messege);
 		} catch {
 			console.error("Error:");
 		}
