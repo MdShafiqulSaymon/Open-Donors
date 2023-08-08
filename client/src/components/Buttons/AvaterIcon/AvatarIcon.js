@@ -43,23 +43,6 @@ const AvatarIcon = ({ firstName, lastName }) => {
 			</button>
 			{isOpen && (
 				<div className="absolute right-0 mt-2 w-48 py-2 bg-white rounded-lg shadow-xl">
-					<div className="flex justify-between items-center px-4 py-2">
-						<span className="text-sm text-black">
-							{isActive ? "Active" : "Inactive"}
-						</span>
-						<div
-							onClick={handleActiveToggle}
-							className={`w-12 h-6 rounded-full p-1 ${
-								isActive ? "bg-green-400" : "bg-red-400"
-							}`}
-						>
-							<div
-								className={`transform ${
-									isActive ? "translate-x-6" : "translate-x-0"
-								} transition-transform duration-200 ease-in-out bg-white w-4 h-4 rounded-full`}
-							></div>
-						</div>
-					</div>
 					{token && (
 						<Link
 							to="/edituser"

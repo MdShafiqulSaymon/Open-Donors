@@ -12,8 +12,8 @@ return(
     <div>
         
         <Header />
+        <div className="mt-1"></div>
         <FilterSearchBar />
-        <Footer />
         
     </div>
 )

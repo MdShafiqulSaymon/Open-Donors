@@ -7,6 +7,12 @@ module.exports = {
     extend: {
       fontFamily: {
         'courgette': ['Courgette', 'serif'],
+      },
+      colors:{
+        ECB390 : '#ECB390',
+        FFF6DC: '#FFF6DC',
+        searchBarColor: '#91C8E4',
+        searchButtonColor: '#75C2F6'
       }
     },
     screens: {

@@ -24,7 +24,7 @@ const FilterSearchBar = () => {
 	useEffect(() => {}, [divisionId, district, blood, handleSearch]);
 	return (
 		<div>
-			<div className="flex items-center justify-between bg-red-300 rounded-lg shadow-md hover:bg-light-green hover:shadow-xl">
+			<div className="flex items-center bg-gray-300  rounded-lg shadow-md hover:bg-light-green hover:shadow-xl">
 				<div className="flex space-x-4 ml-10 mr-2">
 					<DivisionInput
 						className="mb-2"
@@ -40,7 +40,7 @@ const FilterSearchBar = () => {
 					<BloodGroupInput className="mb-2" blood={blood} setBlood={setBlood} />
 				</div>
 				<button
-					className=" border border-gray-300 rounded px-4 py-2 bg-red-800 relative mr-64 hover:bg-red-700"
+					className=" border border-gray-300 rounded px-4 py-2 bg-searchButtonColor relative mr-64 hover:bg-FFF6DC ml-3 mt-2"
 					onClick={handleSearch}
 				>
 					Search

@@ -8,7 +8,7 @@ const ResultsetRow = ({
 	activeStatus,
 }) => {
 	return (
-		<div className="flex items-center justify-between bg-red-300 hover:bg-gray-300 rounded-lg shadow-md hover:bg-light-green hover:shadow-xl">
+		<div className="flex items-center justify-between  hover:bg-gray-300 rounded-lg shadow-md hover:bg-light-green hover:shadow-xl">
 			{/* Photo */}
 			<div className="ml-2">
 				<div
