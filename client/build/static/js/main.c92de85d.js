@@ -32947,7 +32947,7 @@
 														(n = { email: i, password: c }),
 														(e.prev = 4),
 														(e.next = 7),
-														fetch("https://open-donors.onrender.com//signin", {
+														fetch("https://open-donors.onrender.com/signin", {
 															method: "POST",
 															headers: { "Content-Type": "application/json" },
 															body: JSON.stringify(n),
@@ -37150,7 +37150,7 @@
 																(e.prev = 2),
 																(e.next = 5),
 																fetch(
-																	"https://open-donors.onrender.com//completereg",
+																	"https://open-donors.onrender.com/completereg",
 																	{
 																		method: "POST",
 																		headers: {
@@ -37775,7 +37775,7 @@
 											case 0:
 												return (
 													(e.next = 2),
-													fetch("https://open-donors.onrender.com//services", {
+													fetch("https://open-donors.onrender.com/services", {
 														method: "GET",
 														headers: { "Content-Type": "application/json" },
 													})
@@ -38207,14 +38207,11 @@
 														}),
 														(e.prev = 2),
 														(e.next = 5),
-														fetch(
-															"https://open-donors.onrender.com//edituser",
-															{
-																method: "PUT",
-																headers: { "Content-Type": "application/json" },
-																body: JSON.stringify(n),
-															}
-														)
+														fetch("https://open-donors.onrender.com/edituser", {
+															method: "PUT",
+															headers: { "Content-Type": "application/json" },
+															body: JSON.stringify(n),
+														})
 													);
 												case 5:
 													return (a = e.sent), (e.next = 8), a.json();
@@ -38363,14 +38360,11 @@
 													t.preventDefault(),
 													console.log(l),
 													(e.next = 4),
-													fetch(
-														"https://open-donors.onrender.com//forgetpass",
-														{
-															method: "POST",
-															headers: { "Content-Type": "application/json" },
-															body: JSON.stringify({ email: l }),
-														}
-													)
+													fetch("https://open-donors.onrender.com/forgetpass", {
+														method: "POST",
+														headers: { "Content-Type": "application/json" },
+														body: JSON.stringify({ email: l }),
+													})
 												);
 											case 4:
 												return (r = e.sent), (e.next = 7), r.status;
