@@ -11,7 +11,7 @@ const Resultset = ({ divisionId, district, blood, handleSearch }) => {
 	// console.log(district);
 	console.log(blood);
 	const FindAllUser = async () => {
-		const AllUsers = await fetch("http://localhost:5000/services", {
+		const AllUsers = await fetch("https://open-donors.onrender.com//services", {
 			method: "GET",
 			headers: {
 				"Content-Type": "application/json",

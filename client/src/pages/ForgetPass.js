@@ -42,13 +42,16 @@ const ForgetPass = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log(email);
-		const request = await fetch("http://localhost:5000/forgetpass", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({ email: email }),
-		});
+		const request = await fetch(
+			"https://open-donors.onrender.com//forgetpass",
+			{
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ email: email }),
+			}
+		);
 		const response = await request.status;
 		if (response == 200) {
 			navigate("/signin");

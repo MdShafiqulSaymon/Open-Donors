@@ -30,13 +30,16 @@ const CompleteReg = () => {
 		e.preventDefault();
 		const finalData = margeData();
 		try {
-			const request = await fetch("http://localhost:5000/completereg", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(finalData),
-			});
+			const request = await fetch(
+				"https://open-donors.onrender.com//completereg",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(finalData),
+				}
+			);
 			console.log(request.status);
 			if (request.status === 400) {
 				console.log(request.json().exist);
@@ -66,7 +69,7 @@ const CompleteReg = () => {
 			LastName &&
 			dob &&
 			age &&
-			age>=18 &&
+			age >= 18 &&
 			blood &&
 			divisionId &&
 			district
