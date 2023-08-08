@@ -15,11 +15,13 @@ const UserReg = require("./routes/UserReg");
 const UserLogIn = require("./routes/UserLogIn");
 const Service = require("./routes/ServiceAllUserInfo");
 const EditUserInfo = require("./routes/EditUserInfo");
+const ForgetPass = require("./routes/ForgetPass");
 app.use("/completereg", UserReg);
 
 app.use("/signin", UserLogIn);
 app.use("/services", Service);
 app.use("/edituser", EditUserInfo);
+app.use("/forgetpass", ForgetPass);
 
 // Database Connetion
 CONNECTION_DB();

@@ -56,18 +56,20 @@ const Header = () => {
 							</button>
 						</Link>
 					</div>
-					
+
 					<div className="flex items-center">
 						{/* Conditionally render the SignInSignUp or AvatarIcon based on user's authentication status */}
-						{!users ? (
-							<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette md:mb-0 mb-4 self-center md:self-auto md:ml-4 md:justify-self-end">
-								SignIn/SignUp
-							</button>
+						{!token ? (
+							<Link to="/signin">
+								<button className="text-white hover:bg-red-400 hover:shadow-md py-2 px-4 rounded font-courgette md:mb-0 mb-4 self-center md:self-auto md:ml-4 md:justify-self-end">
+									SignIn/SignUp
+								</button>
+							</Link>
 						) : (
 							<div className="flex">
-							<NotificationDropdown />
-							
-							<AvatarIcon firstName="Abu" lastName="Hasan" />
+								<NotificationDropdown />
+
+								<AvatarIcon firstName="Abu" lastName="Hasan" />
 							</div>
 						)}
 					</div>
