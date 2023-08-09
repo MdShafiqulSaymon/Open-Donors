@@ -81,7 +81,7 @@ const Header = () => {
 							<div className="flex">
 								<NotificationDropdown />
 
-								<AvatarIcon firstName={userData.user.FirstName} lastName="userData.user.LastName}" />
+								<AvatarIcon firstName={userData.user.FirstName} lastName={userData.user.LastName} />
 							</div>
 						)}
 					</div>
