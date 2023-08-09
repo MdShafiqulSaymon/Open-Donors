@@ -5,12 +5,24 @@ import NotificationDropdown from "../../Buttons/NotificationIcon";
 import { toBeRequired } from "@testing-library/jest-dom/matchers";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../../Contexts/UserContext";
+import jwtDecode from "jwt-decode";
 const Header = () => {
 	const { user, setUser } = useContext(UserContext);
 	const [isOpen, setIsOpen] = useState(false);
 	const [users, setUsers] = useState(true); // Initialize user as null
 	const token = localStorage.getItem("token");
-	useEffect(() => {}, []);
+	let userData = {
+		user:{
+			firstName:"ABU",
+			lastName:"HASAN",
+		}
+	}
+	if(token){
+		userData=jwtDecode(token);
+	}
+	useEffect(() => {
+		console.log(userData)
+	}, []);
 	return (
 		<nav className="bg-red-500 p-6">
 			<div className="flex flex-col md:flex-row items-center justify-between mt-2">
@@ -69,7 +81,7 @@ const Header = () => {
 							<div className="flex">
 								<NotificationDropdown />
 
-								<AvatarIcon firstName="Abu" lastName="Hasan" />
+								<AvatarIcon firstName={userData.user.FirstName} lastName="userData.user.LastName}" />
 							</div>
 						)}
 					</div>

@@ -11,7 +11,7 @@ module.exports = {
       colors:{
         ECB390 : '#ECB390',
         FFF6DC: '#FFF6DC',
-        searchBarColor: '#91C8E4',
+        searchBarColor: '#850000',
         searchButtonColor: '#75C2F6'
       }
     },
